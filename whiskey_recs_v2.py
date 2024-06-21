@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg as fct
 from dbpass import password
+from sqlalchemy.engine import create_engine
+from sqlalchemy import text
 
 def s_query(phrase:str) ->str:
     '''Returns a string that is a runnable SQL query on the whiskey db'''
@@ -58,6 +60,7 @@ def delete_figure_agg(figure_agg):
 def main():
     #start connection
     con = psycopg2.connect(f'dbname=WhiskyAdvocate user= postgres password ={password} host = 127.0.0.1 port = 5432')
+    engine=create_engine(f"postgresql+psycopg2://postgres:{password}@localhost:5432/WhiskyAdvocate")
 
     #layout 
 
@@ -104,7 +107,7 @@ def main():
         
         if event == 'Search':
             ws_quer = s_query(values['-WS-'])
-            results = pd.read_sql(ws_quer, con)
+            results = pd.read_sql(text(ws_quer), engine)
             w_names = results['name'].to_list()
             w_nums = results['clustering'].to_list()
             w_dict = {}
@@ -118,7 +121,7 @@ def main():
             c_val = w_dict[values['-WF-'][0]]
             c_q = c_query(c_val) 
             #get data by running the query
-            c_res = pd.read_sql(c_q, con)
+            c_res = pd.read_sql(text(c_q), engine)
             #unpack into lists
             c_names = c_res['name'].to_list()
             c_revs = c_res['review'].to_list()
