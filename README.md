@@ -1,5 +1,12 @@
 # Whiskey Recommendation App
-This app takes the information from the clustering analysis and uses it to provide recommendations based on user input. 
+This app takes the information from the clustering analysis and uses it to provide recommendations based on user input. This is my application to share results from the
+<a href="https://github.com/gspahlin/WhiskeyAdvocate_Review_Clustering_Analysis/tree/master">Whisky Clustering Analysis</a> that I developed. The whiskey recommender app shares
+insights on whiskey similarity based on the profile of descriptive words that appear in the language of the <a href="https://whiskyadvocate.com/"> Whisky Advocate</a> review elucidated
+by DBSCAN clustering on vectorized reviews. 
+<br><br>
+ <b>The Whisky Recommender Interface</b>
+ <img src="https://github.com/gspahlin/whiskey_recommender_app/blob/main/app_picture/whiskey_example.jpg">
+ <br>
 <h3>Virtual Environment and Setup</h3>
 Type the following commands and run them in order:
 <br><br>
@@ -29,5 +36,9 @@ To use the app, enter a keyword into the search bar and click the search box. Th
 the chosen keyword into box 1. Clicking on a whisky will reveal whiskies that were found to have similar descriptive profiles during clustering analysis. Clicking on one will show details of the whiskey's descriptive profile.
 <br>
 <br>
-<img src="https://github.com/gspahlin/whiskey_recommender_app/blob/main/app_picture/whiskey_example.jpg">
-<b>Figure 1 - The Whisky Recommender Interface</b>
+ Gregory W. Spahlinger<br>   
+ gspahlin@gmail.com <br>   
+ <a href = 'https://www.linkedin.com/in/gregory-spahlinger/'>LinkedIn</a>
+ <br><br><br>
+
+
