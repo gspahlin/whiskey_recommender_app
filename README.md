@@ -2,7 +2,8 @@
 This app takes the information from the clustering analysis and uses it to provide recommendations based on user input. This is my application to share results from the
 <a href="https://github.com/gspahlin/WhiskeyAdvocate_Review_Clustering_Analysis/tree/master">Whisky Clustering Analysis</a> that I developed. The whiskey recommender app shares
 insights on whiskey similarity based on the profile of descriptive words that appear in the language of the <a href="https://whiskyadvocate.com/"> Whisky Advocate</a> review elucidated
-by DBSCAN clustering on vectorized reviews. 
+by DBSCAN clustering on vectorized reviews. The data for recommendations was scraped from WhiskyAdvocate.com in an <a href="https://github.com/gspahlin/WhiskyAdvocate_ETL">ETL process</a>
+found in a separate repository. 
 <br><br>
  <b>The Whisky Recommender Interface</b>
  <img src="https://github.com/gspahlin/whiskey_recommender_app/blob/main/app_picture/whiskey_example.jpg">
